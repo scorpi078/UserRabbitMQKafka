@@ -37,12 +37,5 @@ namespace MyRabbitMqService.Controllers
         //    return Ok(result);
         //}
 
-        [HttpPost("SendKafka")]
-        public async Task<IActionResult> SendPersonKafka([FromBody] User u)
-        {
-            await _kafkaProducer.SendUserKafka(u);
-
-            return Ok();
-        }
     }
 }
